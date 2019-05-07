@@ -19,7 +19,7 @@ class HolaMundo {
 	char caracter= 'A';
 	String texto;
 	texto= "Cualquier texto";
-	System.out.println("texto= " + texto);
+	System.out.println("texto2= " + texto);
 	
 	
 }
