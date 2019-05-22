@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Otros campos</h1> </br>
+
+        <form action="#" method="post" enctype="text/plain">
+            <input type="button" value="Boton JS" onclick="alert('Hola tu')"/> </br>
+            <input type="button" value="Boton JS externo" onclick="mostrarmensaje('Hey que paso')"/> </br>
+            </br><label for="fichero">Fichero:</label>
+            <input type="file" id="fichero" name="fichero"/></br>
+            </br><label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="Fecha"/></br>
+            </br><label for="contraseña">Contraseña:</label>
+            <input type="password" id="contraseña" name="Contraseña"/></br>
+            </br><label for="passwd-encriptada"></label>
+            <input type="hidden" id="passwd-encriptada" name="passwd-encriptada" value="fsff"/>
+
+            <br>Otros campos</br>
+            </br><label for="url">Url:</label>
+            <input type="url" id="direccion-serv" name="direccion-serv"/></br>
+            </br><label for="rango">Rango:</label>
+            <input type="range" id="rango" name="rango" min="-50" max="50"/></br>
+            </br><label for="telefono">Telefono:</label>
+            <input type="tel" id="telefono" name="telefono"/></br>
+            </br><label for="busqueda">Busqueda:</label>
+            <input type="search" id="busqueda" name="busqueda"/></br>
+            </br><label for="enviar">Enviar:</label>
+            <input type="submit" id="enviar" name="enviar"/></br>
+
+            <br>Otros campos especiales</br>
+            <br/><input type="checkbox" checked="checked"/> O checado o no </br>
+            <br/>Opciones:
+            <input type="radio" id="tipoCliente" name="tipoCliente" value="Cliente normal"> Cliente normal
+            <input type="radio" id="tipoClienteInv" name="tipoCliente" value="Cliente invitado"> Cliente invitado
+            <input type="radio" id="tipoClienteVIP" name="tipoCliente" value="Cliente VIP"> Cliente VIP</br>
+
+            <br>Frecuencia de viajes: </br>
+            <select id="frecuencia" name="Frecuencia">
+                <option value="1">Varias veces al día</option>
+                <option value="2">Varias veces a la semana</option>
+                <option value="3">Varias veces al mes</option>
+                <option value="4">Varias veces al año</option>
+            </select>
+
+            <br>Comentarios y mensaje:</br>
+            <textarea id=""comentarios cols="30" rows="6" name="comentarios" placeholder="Coméntanos algo."></textarea>
+
+        </form>
+        <table border="2">
+            <caption>Lista de cosas</caption>
+            <tr>
+                <td>Comida</td>
+                <td>Lechuga</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Menaje</td>
+                <td>Plato</td>
+                <td>10</td>
+            </tr>
+
+        </table>
+        <img alt="Texto alternativo IMG" src="images/loish.jpg"></br>
+
+
+        <a href="index.html">Vuelve al index</a>
+        <script src="js/04_mascampos.js"></script>
+    </body>
+</html>

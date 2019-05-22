@@ -1,0 +1,41 @@
+*{
+    margin:2px;
+    padding: 2px; 
+}
+.bloque {
+     margin-left: 300px;
+     margin-right: 500px;
+     background-color: blueviolet;
+     border-style: inset;
+     padding: 50px;
+     position: relative;
+    text-shadow: 2px 3px gray;
+}
+h1{
+    margin-left: 300px;
+    margin-right: 500px;
+    text-align: center;
+}
+
+.clase{
+    padding-left: 50px;
+    width: 100%;
+    font-family: fantasy;
+    font-weight: bold;
+    font-size: 1em;
+}
+.clase2{
+    width: 60%;
+    border-radius: 50px;
+    margin-left: 20px;
+    display: inline-block;
+    text-align: center;
+    
+    
+}
+.clase4{
+    text-align: center;
+}
+.clase5{
+    text-align: center;
+}

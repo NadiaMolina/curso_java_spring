@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/formulario_css.css">
+    </head>
+    <body>
+        <div class="margen-lateral">
+            <h1>Formularios</h1>
+        </div>
+
+        <div class="bloque">
+            <form action="mailto:correo@empresa.com"
+                  method="post" enctype="text/plain">
+                <div class="clase">
+                    <label for="nombre">Nombre: </label> 
+                    <input type="text" name="nombre" id="nombre" size="30" maxlength="40" placeholder="Introduzca su nombre" class="clase2"/> 
+                </div>
+
+                <div class="clase">
+                    <label for="edad">Edad: </label> 
+                    <input type="number" name="edad" id="edad" min="18" max="80" class="clase2"/> 
+                </div>
+
+                <div class="clase">
+                    <label for="email">Email: </label> 
+                    <input type="email" name="email" id="email" size="30" maxlength="255" class="clase2"/> 
+                </div>
+                <div class="clase4">
+                    <input type="submit" value="Enviar formulario" class="clase3"/>
+                    <input type="reset" value="Borrar formulario" class="clase3"/>
+                </div>
+            </form> 
+        </div>
+        <div class="clase5">
+            <a href="index.html">Vuelve al index</a>
+        </div>
+        
+        <script>
+            var texto = "Un texto por que si";
+            var numero = 10.234;
+            var campoNombre = document.getElementById("nombre");
+            campoNombre.value = "";
+            document.getElementById("email").setAttribute("placeholder", "Introduzca su email");
+            document.getElementById("edad").value = "30";
+
+        </script>
+
+    </body>
+</html>

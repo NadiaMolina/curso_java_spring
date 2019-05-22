@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <input id="btn" type="button" value="probar"/>
+        <div id="divDatos"></div>
+        <script>
+            function mostrarDatos() {
+                var divDatos = document.getElementById("divDatos");
+                divDatos.innerHTML = "Datos de objetos";
+                var objCliente = new Object();
+                objCliente.nombre = "Juan";
+                objCliente.edad = "27";
+                objCliente["activo"] = true;
+                divDatos.innerHTML += "Nombre: " + objCliente["nombre"] + "Activo: " + objCliente.activo + "</br>";
+                objCliente.toString = function () {
+                    return "Nombre: " + this.nombre + "Edad: " + this ["edad"];//está creando un objeto de tipo función
+                };
+                var funATexto = new Function("param", "return this.nombre + \"  - \" + param");
+                funATexto.propiedadSinSentido = "A ponerla";
+                objCliente.aTexto = funATexto;
+                divDatos.innerHTML += objCliente.toString();
+                divDatos.innerHTML += objCliente.aTexto("Valor1", "Valor2");
+
+                var Cliente = function (nom, edad) {
+                    this.nombre = nom;
+                    this.edad = edad;
+                    this.enTexto = function () {
+                        return "cliente: " + this.nombre + "edad= " + this.edad;
+                    };
+                };
+                var miCliente = new Cliente("Ana", 30);
+                divDatos.innerHTML += miCliente.enTexto();
+                //formato correcto de JSON 
+                var otroCliente = {
+                    "nombre": "Luis",
+                    "edad": 30,
+                    "activo": true,
+                    "enTexto": function () {
+                        return "Cli" + this.nombre
+                    }
+                };
+                //otros formatos permitidos en JS
+                var otroCliente2 = {
+                    'nombre': "Luis",
+                    edad: 30,
+                    "activo": true,
+                    "enTexto": function () {
+                        return "Cli" + this.nombre
+                    }
+                };
+
+                divDatos.innerHTML += otroCliente.enTexto() + " > " + otroCliente.edad;
+                for (var clave in otroCliente) {
+                    divDatos.innerHTML += "<br/>" + otroCliente [clave];
+                }
+            }
+
+            var btn = document.getElementById("btn");
+            btn.onclick = mostrarDatos;
+            //btn.addEvenListener ("click", mostrarDatos); 
+            //JSON JavaScript Object Notation
+
+            class ClaseCliente { //prototipo.
+            constructor(nombre, edad, act) {
+            this.nombre = nombre;
+                    this.edad = edad;
+                    this.activo = act;
+            }
+            toString () {
+            return "Cli" + this.nombre;
+            }
+
+            }
+
+        </script>
+
+    </body>
+
+</html>
+
+

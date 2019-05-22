@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Mi primera web</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            form {
+                background-color: #AAFFAA;
+                padding: 50px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <h1> T&iacute;tulo de la p&aacute;gina</h1> 
+        <h2>Subt&iacute;tulo NIVEL 2</h2>
+        <h3>Subt&iacute;tulo NIVEL 3</h3>
+        <h6>Subt&iacute;tulo NIVEL 4</h6>
+        <p> Estás en la página primera</p>
+        <p> Base    para     otras    webs</p>
+        <p>Varios espacios: &nbsp;&nbsp;&nbsp;&nbsp; FIN</p>
+        <p>Otros símbolos: <br/>
+            &aacute; &eacute; &iacute; &Oacute; &Uacute;
+        </p>
+        <h1> Listas</h1>
+        <ul>
+            <li>1-cosa</li>
+            <li>2-Otra cosa</li>
+            <li>3-Más una</li>
+        </ul>
+        <ol type= "1" start= "15">
+            <li>1-cosa</li>
+            <li>2-Otra cosa</li>
+            <li>3-Más una</li>
+        </ol>
+        <ol type= "i" start= "15" reversed>
+            <li>1-cosa</li>
+            <li>2-Otra cosa</li>
+            <li>3-Más una</li>
+        </ol>
+        <ol type= "a" start= "1">
+            <li>1-cosa</li>
+            <li>2-Otra cosa</li>
+            <li>3-Más una</li>
+        </ol>
+
+        <form action="mailto:correo@empresa.com"
+              method="post" enctype="text/plain">
+            <label for="nombre">Nombre: </label> <br/>
+            <input type="text" name="nombre" id="nombre" size="30" maxlength="40" placeholder="Introduzca su nombre"/> <br/>
+            <label for="edad">Edad: </label> <br/>
+            <input type="number" name="edad" id="edad" min="18" max="80"/> <br/>
+            <label for="email">Email: </label> <br/>
+            <input type="email" name="email" id="email" size="30" maxlength="255"/> <br/>
+            <br/>
+
+            <input type="submit" value="Enviar formulario" />
+            <input type="reset" value="Borrar formulario" />
+
+        </form> 
+
+        <script>
+            var texto = "Un texto por que si";
+            var numero = 10.234;
+            var campoNombre = document.getElementById("nombre");
+            campoNombre.value = "";
+            document.getElementById("email").setAttribute("placeholder", "Introduzca su email");
+            document.getElementById("edad").value = "30";
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            form {
+                background-color: #AAFFAA;
+                padding: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="mailto:correo@empresa.com"
+              method="post" enctype="text/plain">
+            <label for="nombre">Nombre: </label> <br/>
+            <input type="text" name="nombre" id="nombre" size="30" maxlength="40" placeholder="Introduzca su nombre"/> <br/>
+            <label for="edad">Edad: </label> <br/>
+            <input type="number" name="edad" id="edad" min="18" max="80"/> <br/>
+            <label for="email">Email: </label> <br/>
+            <input type="email" name="email" id="email" size="30" maxlength="255"/> <br/>
+            <br/>
+
+            <input type="submit" value="Enviar formulario" />
+            <input type="reset" value="Borrar formulario" />
+
+        </form> 
+        <a href="index.html">Vuelve al index</a>
+        <script>
+            var texto = "Un texto por que si";
+            var numero = 10.234;
+            var campoNombre = document.getElementById("nombre");
+            campoNombre.value = "";
+            document.getElementById("email").setAttribute("placeholder", "Introduzca su email");
+            document.getElementById("edad").value = "30";
+
+        </script>
+
+    </body>
+</html>
