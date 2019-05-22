@@ -16,7 +16,7 @@ class HolaMundo {
 	System.out.println ("enteroLargo = "+ enteroLargo);
 	System.out.println ("unByte = "+ unByte);
 
-	char caracter= 'A';
+	char caracter= 'B';
 	String texto;
 	texto= "Cualquier texto";
 	System.out.println("texto2= " + texto);

@@ -7,7 +7,7 @@ class EstructurasControl
 			contador++;
 		}
 		{
-			System.out.println("bloque");
+			System.out.println("bloquE");
 			int var = 0;
 	}
 	
