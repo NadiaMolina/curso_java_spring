@@ -7,6 +7,7 @@
     </c:if>
 <%-- TODO: Poner sólo cuando esté LOGIN --%>
     <a href="editar.jsp">Editar AJAX+REST</a>
+    <a href="eliminar.jsp">Eliminar REST</a>
     
     <c:if test="${login == 'ok'}">
         <a href="listado.jsp">Listado clientes</a>

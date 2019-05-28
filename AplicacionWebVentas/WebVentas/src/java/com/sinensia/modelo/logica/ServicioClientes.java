@@ -91,4 +91,8 @@ public class ServicioClientes {
     public List<Cliente> obtenerTodos() {
         return dao.obtenerTodos();
     }
+
+    public Cliente eliminar(String nombre, String email, String password, String edad, String activo) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

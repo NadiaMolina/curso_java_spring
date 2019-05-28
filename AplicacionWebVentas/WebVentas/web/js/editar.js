@@ -1,3 +1,6 @@
+
+
+
 var alPulsarModificar = function () {
     antesDeEnviar();
     var nombre = document.getElementById("nombre").value;
@@ -21,9 +24,19 @@ var alPulsarModificar = function () {
     var peticionHTTP = new XMLHttpRequest(); // Objeto AJAX
     // ¿Que tiene que hacer al recibir la respuesta?
     peticionHTTP.onreadystatechange = function () {
-        // alert("Ha cambiado de estado");
+       alert("Ha cambiado de estado nivel:" + this.readyState);
         if (this.readyState === 4 && this.status === 200) {
-            alert("Hemos recibido algo!" + this.responseText);            
+            alert("Hemos recibido algo!" + this.responseText); 
+            var jsonResp = this.responseText;
+            var objResp = JSON.parse(jsonResp);
+            alert ("¿Email recibido?  " + objResp["email"] + "Y el nombre es " + objResp.nombre);
+            console.log("JSON: >> " + jsonResp);
+            document.getElementById("span_id").innerHTML = objResp.id;
+            document.getElementById("span_nombre").innerHTML = objResp.nombre;
+            document.getElementById("span_email").innerHTML = objResp.email;
+            document.getElementById("span_edad").innerHTML = objResp.edad;
+            document.getElementById("span_activo").innerHTML = objResp.activo;
+            document.getElementById("span_password").innerHTML = objResp.password;
         } /*else {
             alert("Aun NO hemos recibido nada!");
         }*/
@@ -48,3 +61,6 @@ var alPulsarModificar = function () {
 };
 // document.getElementById("btn_modificar").addEventListener("click", alPulsarModificar );
 document.getElementById("btn_modificar").onclick = alPulsarModificar;
+
+
+  

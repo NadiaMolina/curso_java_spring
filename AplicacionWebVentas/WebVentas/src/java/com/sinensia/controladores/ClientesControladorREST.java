@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package com.sinensia.controladores;
-
+import com.google.gson.Gson;
 import com.sinensia.modelo.Cliente;
 import com.sinensia.modelo.logica.ServicioClientes;
 import java.io.IOException;
@@ -40,7 +40,8 @@ public class ClientesControladorREST extends HttpServlet {
             String password = request.getParameter("password_encrip");
             String edad = request.getParameter("edad");
             String activo = request.getParameter("activo");
-
+            
+             
             ServicioClientes servCli;
             servCli = new ServicioClientes();
 
@@ -50,15 +51,22 @@ public class ClientesControladorREST extends HttpServlet {
                 cli = servCli.modificar(cli.getId(), nombre, email, password, edad, activo);
                 if (cli != null) {
                     jsonCli += "   \"id\" : \"" + cli.getId() + "\"";
-                    jsonCli += "   \"nombre\" : \"" + cli.getNombre() + "\"";
+                    jsonCli += "  , \"nombre\" : \"" + cli.getNombre() + "\"";
                 }
             }
             jsonCli += "}";
             salida.print(jsonCli);
             System.out.println(">>>>> " + jsonCli);
+            
+            
+            Gson objGson = new Gson ();
+            String strJson = objGson.toJson(nombre);
+            salida.print(objGson);
+            System.out.println(">>>>>> " + objGson);
         }
+        
     }
-
+    
     /**
      * Handles the HTTP <code>POST</code> method.
      *
